@@ -19,14 +19,12 @@ const weatherReducer = (state = primaryState, { type, payload }) => {
         payload.data[24],
         payload.data[36],
       ];
-      console.log('list', fiveDaysWeather);
       return {
         ...primaryState,
         country: payload.country,
         weatherData: fiveDaysWeather,
       };
     case 'FETCH_WEATHER_FAIL':
-      console.log('error', payload.error);
       return { ...primaryState, error: payload.error };
     default:
       return state;

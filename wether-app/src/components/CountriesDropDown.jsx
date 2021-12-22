@@ -53,7 +53,7 @@ function CountriesDropDown() {
           dispatch(fetchWeather());
         }}
       >
-        Submit
+        Show me the weather!
       </button>
       <button onClick={handleClear}>Clear</button>
 

@@ -13,24 +13,24 @@ function WeatherList() {
         <p>Choose a country</p>
       ) : (
         fiveDaysWeather.map(dayData => {
-          console.log(dayData);
           return (
             <div key={dayData.dt} className='weather-day'>
               <h3>{dayData['dt_txt']}</h3>
+              <h4>{dayData.weather[0].main}</h4>
+              <img
+                alt='weather-icon'
+                src={`http://openweathermap.org/img/wn/${dayData.weather[0].icon}@2x.png`}
+              />
               <div>
-                <span>temp: {Math.floor(dayData.main.temp - 273.15)} deg</span>{' '}
+                <span>Temp: {Math.floor(dayData.main.temp - 273.15)} °C</span>{' '}
                 <span>
-                  feels like: {Math.floor(dayData.main['feels_like'] - 273.15)}{' '}
-                  deg
+                  Feels like: {Math.floor(dayData.main['feels_like'] - 273.15)}{' '}
+                  °C
                 </span>
               </div>
               <div>
                 <span>Wind speed: {Math.floor(dayData.wind.speed)} </span>{' '}
               </div>
-              <img
-                alt='weather-icon'
-                src={`http://openweathermap.org/img/wn/${dayData.weather[0].icon}@2x.png`}
-              />
             </div>
           );
         })
