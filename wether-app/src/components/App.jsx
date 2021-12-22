@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import CountriesDropDown from './CountriesDropDown';
 import WeatherList from './WeatherList';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 // Pop Up messages
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,11 +21,13 @@ function App() {
       draggable: true,
       progress: undefined,
     });
-
+  // Dispatch
+  const dispatch = useDispatch();
   /***** EFFECT *****/
   useEffect(() => {
     if (errorMessage) {
       notify(errorMessage);
+      dispatch({ type: 'RESET' });
     } else {
       return;
     }
