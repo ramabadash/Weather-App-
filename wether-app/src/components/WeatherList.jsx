@@ -13,15 +13,18 @@ function WeatherList() {
 
   return (
     <div className='weather-container'>
-      <h1>{country}</h1>
-      {countryCode ? (
-        <img
-          alt='fleg'
-          src={`https://flagcdn.com/28x21/${countryCode.toLowerCase()}.png`}
-        />
-      ) : (
-        ''
-      )}
+      <h1>
+        {country}{' '}
+        {countryCode ? (
+          <img
+            alt='fleg'
+            src={`https://flagcdn.com/28x21/${countryCode.toLowerCase()}.png`}
+          />
+        ) : (
+          ''
+        )}
+      </h1>
+
       {fiveDaysWeather.length < 1 ? (
         <p>Choose a country</p>
       ) : (
