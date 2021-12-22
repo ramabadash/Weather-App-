@@ -1,13 +1,37 @@
-import React from 'react';
-import { cityNames } from '../data/cityName';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 function CountriesDropDown() {
+  /***** STATE *****/
+  const [country, setCountry] = useState('');
+  const countriesNames = useSelector(state => state.countries);
+
+  /***** FUNCTIONS ******/
+  const handleSubmit = () => {
+    console.log(country);
+  };
+
   return (
     <div>
-      <input type='text' list='countries' />
+      <input
+        value={country}
+        type='text'
+        list='countries'
+        onChange={e => {
+          setCountry(e.target.value);
+        }}
+      />
+      <button onClick={handleSubmit}>Submit</button>
+      <button
+        onClick={() => {
+          setCountry('');
+        }}
+      >
+        Clear
+      </button>
 
       <datalist id='countries'>
-        {cityNames.map(item => (
+        {countriesNames.map(item => (
           <option key={item} value={item} />
         ))}
       </datalist>
