@@ -58,8 +58,8 @@ function CountriesDropDown() {
       <button onClick={handleClear}>Clear</button>
 
       <datalist id='countries'>
-        {countriesNames.map(item => (
-          <option key={item} value={item} />
+        {countriesNames.map((item, index) => (
+          <option key={index} value={item} />
         ))}
       </datalist>
     </div>
