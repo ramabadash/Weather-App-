@@ -10,11 +10,12 @@
 
 .search-container button {
   width: auto;
-  padding: 0.5em;
+  font-size: 1.25em;
+  padding: 0.25em;
   font-family: 'Didact Gothic';
   font-weight: bold;
   border-radius: 0.5em;
-  border-width: 0.25em;
+  border-width: 0.15em;
   border-style: solid;
   border-color: black;
   margin-left: 0.5em;

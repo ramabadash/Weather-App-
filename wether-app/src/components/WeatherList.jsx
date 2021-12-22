@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import moment from 'moment';
 // Style
 import '../styles/WeatherList.css';
 
@@ -8,6 +9,7 @@ function WeatherList() {
   const fiveDaysWeather = useSelector(state => state.weatherData);
   const country = useSelector(state => state.country);
   const countryCode = useSelector(state => state.countryCode);
+  const daysArr = ['TODAY', 'TOMORROW', 'IN 2 DAYS', 'IN 3 DAYS', 'IN 4 DAYS'];
 
   return (
     <div className='weather-container'>
@@ -24,10 +26,11 @@ function WeatherList() {
         <p>Choose a country</p>
       ) : (
         <div className='days-container'>
-          {fiveDaysWeather.map(dayData => {
+          {fiveDaysWeather.map((dayData, i) => {
             return (
               <div key={dayData.dt} className='weather-day'>
-                <h3>{dayData['dt_txt']}</h3>
+                <h3>{daysArr[i]}</h3>
+                <h3>{moment(dayData['dt_txt']).format('lll')}</h3>
                 <h4>{dayData.weather[0].main}</h4>
                 <img
                   alt='weather-icon'
