@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { reset } from '../actions/weatherActions';
 
 function CountriesDropDown() {
   /***** STATE *****/
@@ -7,8 +8,16 @@ function CountriesDropDown() {
   const countriesNames = useSelector(state => state.countries);
 
   /***** FUNCTIONS ******/
+  //
+  const dispatch = useDispatch();
+  //
   const handleSubmit = () => {
     console.log(country);
+  };
+  // Clear country state and reset the state
+  const handleClear = () => {
+    setCountry('');
+    dispatch(reset());
   };
 
   return (
@@ -22,13 +31,7 @@ function CountriesDropDown() {
         }}
       />
       <button onClick={handleSubmit}>Submit</button>
-      <button
-        onClick={() => {
-          setCountry('');
-        }}
-      >
-        Clear
-      </button>
+      <button onClick={handleClear}>Clear</button>
 
       <datalist id='countries'>
         {countriesNames.map(item => (

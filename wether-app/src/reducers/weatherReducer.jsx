@@ -8,8 +8,8 @@ export const primaryState = {
 
 const weatherReducer = (state = primaryState, { type }) => {
   switch (type) {
-    case 'SEARCH_WEATHER':
-      return state;
+    case 'RESET':
+      return primaryState;
     default:
       return state;
   }
