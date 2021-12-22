@@ -5,10 +5,19 @@ function WeatherList() {
   /***** STATE *****/
   const fiveDaysWeather = useSelector(state => state.weatherData);
   const country = useSelector(state => state.country);
+  const countryCode = useSelector(state => state.countryCode);
 
   return (
     <div>
       <h1>{country}</h1>
+      {countryCode ? (
+        <img
+          alt='fleg'
+          src={`https://flagcdn.com/28x21/${countryCode.toLowerCase()}.png`}
+        />
+      ) : (
+        ''
+      )}
       {fiveDaysWeather.length < 1 ? (
         <p>Choose a country</p>
       ) : (

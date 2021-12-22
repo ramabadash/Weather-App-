@@ -3,6 +3,7 @@ import { countriesNames } from '../data/countriesNames';
 export const primaryState = {
   countries: countriesNames,
   country: '',
+  countryCode: '',
   weatherData: [],
   error: '',
 };
@@ -22,6 +23,7 @@ const weatherReducer = (state = primaryState, { type, payload }) => {
       return {
         ...primaryState,
         country: payload.country,
+        countryCode: payload.countryCode,
         weatherData: fiveDaysWeather,
       };
     case 'FETCH_WEATHER_FAIL':

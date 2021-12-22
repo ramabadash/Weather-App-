@@ -24,7 +24,7 @@ function CountriesDropDown() {
           `https://api.openweathermap.org/data/2.5/forecast?q=${country.toLocaleLowerCase()}&appid=d00f1c8526b61b691dc7eb25cf19e05c`
         )
         .then(({ data }) => {
-          dispatch(fetchWeatherSuccess(data.list, country));
+          dispatch(fetchWeatherSuccess(data.list, country, data.city.country));
         })
         .catch(error => {
           dispatch(fetchWeatherFail(error.response.data.message));

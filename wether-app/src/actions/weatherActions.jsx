@@ -4,10 +4,10 @@ const reset = () => {
   };
 };
 
-const fetchWeatherSuccess = (data, country) => {
+const fetchWeatherSuccess = (data, country, countryCode) => {
   return {
     type: 'FETCH_WEATHER_SUCCESS',
-    payload: { data, country },
+    payload: { data, country, countryCode },
   };
 };
 
