@@ -1,7 +1,7 @@
-import { countriesNames } from '../data/countriesNames';
+import { citiesNames } from '../data/citiesNames';
 
 export const primaryState = {
-  countries: countriesNames,
+  countries: citiesNames,
   country: '',
   countryCode: '',
   weatherData: [],

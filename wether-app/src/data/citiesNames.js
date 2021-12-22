@@ -1,4 +1,4 @@
-export const countriesNames = [
+export const citiesNames = [
   'Herat',
   'Kabul',
   'Kandahar',
