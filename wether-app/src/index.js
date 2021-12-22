@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import weatherReducer from './reducers/weatherReducer';
 import App from './components/App';
+
+const store = createStore(weatherReducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}>
+    <Provider store={store}>
       <App />
-    </Provider> */}
-    <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
