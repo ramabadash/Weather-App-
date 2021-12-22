@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 // Pop Up messages
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// Style
+import '../styles/App.css';
 
 function App() {
   /***** STETS *****/

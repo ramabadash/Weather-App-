@@ -1,0 +1,41 @@
+.search-input {
+  width: 70vh;
+  height: 1.75em;
+  border-radius: 0.5em;
+  font-family: 'Didact Gothic';
+  color: black;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.search-container button {
+  width: auto;
+  padding: 0.5em;
+  font-family: 'Didact Gothic';
+  font-weight: bold;
+  border-radius: 0.5em;
+  border-width: 0.25em;
+  border-style: solid;
+  border-color: black;
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.search-btn {
+  background-color: rgb(38, 170, 104);
+  color: whitesmoke;
+}
+.search-btn:hover {
+  background-color: whitesmoke;
+  color: rgb(38, 170, 104);
+}
+
+.clear-btn {
+  background-color: brown;
+  color: whitesmoke;
+}
+
+.clear-btn:hover {
+  background-color: whitesmoke;
+  color: brown;
+}

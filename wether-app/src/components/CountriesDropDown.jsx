@@ -6,6 +6,8 @@ import {
   fetchWeatherSuccess,
   fetchWeatherFail,
 } from '../actions/weatherActions';
+// Style
+import '../styles/CountriesDropDown.css';
 
 function CountriesDropDown() {
   /***** STATE *****/
@@ -39,8 +41,10 @@ function CountriesDropDown() {
   };
 
   return (
-    <div>
+    <div className='search-container'>
       <input
+        className='search-input'
+        placeholder='Enter city name'
         value={country}
         type='text'
         list='countries'
@@ -52,10 +56,13 @@ function CountriesDropDown() {
         onClick={() => {
           dispatch(fetchWeather());
         }}
+        className='search-btn'
       >
         Show me the weather!
       </button>
-      <button onClick={handleClear}>Clear</button>
+      <button className='clear-btn' onClick={handleClear}>
+        Clear
+      </button>
 
       <datalist id='countries'>
         {countriesNames.map((item, index) => (
