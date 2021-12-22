@@ -45,6 +45,7 @@
 
 - **Shows weather forecast for about 5 days starting today (today as well as 24 hours from now, 48 hours and so on)🌞⛅🌦**
 - **Nice pictures illustrating the expected weather**
+- **The state flag to which the city belongs to**
 
 ---
 
