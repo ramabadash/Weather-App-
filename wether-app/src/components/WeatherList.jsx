@@ -26,7 +26,7 @@ function WeatherList() {
       </h1>
 
       {fiveDaysWeather.length < 1 ? (
-        <p>Choose a country</p>
+        <p className='weather-day'>Choose a city!</p>
       ) : (
         <div className='days-container'>
           {fiveDaysWeather.map((dayData, i) => {
@@ -41,10 +41,14 @@ function WeatherList() {
                 />
                 <div>
                   <p>
+                    <i className='fas fa-temperature-high'></i>
+                    {'  '}
                     Temp:{' '}
                     <strong>{Math.floor(dayData.main.temp - 273.15)} °C</strong>
                   </p>{' '}
                   <p>
+                    <i className='fas fa-temperature-high'></i>
+                    {'  '}
                     Feels like:{' '}
                     <strong>
                       {Math.floor(dayData.main['feels_like'] - 273.15)} °C
@@ -53,6 +57,8 @@ function WeatherList() {
                 </div>
                 <div>
                   <span>
+                    <i className='fas fa-wind'></i>
+                    {'  '}
                     Wind speed:{' '}
                     <strong>{Math.floor(dayData.wind.speed)} Knot</strong>{' '}
                   </span>{' '}

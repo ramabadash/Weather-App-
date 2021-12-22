@@ -25,6 +25,7 @@ function App() {
     });
   // Dispatch
   const dispatch = useDispatch();
+
   /***** EFFECT *****/
   useEffect(() => {
     if (errorMessage) {
@@ -48,7 +49,10 @@ function App() {
         draggable
         pauseOnHover
       />
-      <h1>What is the weather?</h1>
+      <h1>
+        What is the weather? <i className='fas fa-cloud-sun'></i>
+      </h1>
+
       <CountriesDropDown />
       <WeatherList />
     </div>
