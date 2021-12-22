@@ -3,7 +3,7 @@ import { countriesNames } from '../data/countriesNames';
 export const primaryState = {
   countries: countriesNames,
   country: '',
-  weatherData: {},
+  weatherData: [],
   error: '',
 };
 
