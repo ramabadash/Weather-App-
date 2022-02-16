@@ -1,5 +1,5 @@
 ## FrondEnd Whether App with redux thunk
-
+<img alt="weather-logo" src="https://icons-for-free.com/iconfiles/png/512/fog+foggy+weather+icon-1320196634851598977.png" hight="50px" width="50px">
 ---
 
 ### Technologies in use - 👩‍💻👨‍💻
@@ -23,7 +23,7 @@
 
 ## My app -
 
-### Visit - ✨(My weather app)[https://ramabadash.github.io/Weather-App-/]✨
+### Visit - ✨[My weather app](https://ramabadash.github.io/Weather-App-/)✨
 
 ### Features -
 
