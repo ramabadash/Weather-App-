@@ -1,5 +1,7 @@
 ## FrondEnd Whether App with redux thunk
-<img alt="weather-logo" src="https://icons-for-free.com/iconfiles/png/512/fog+foggy+weather+icon-1320196634851598977.png" hight="50px" width="50px">
+
+<img alt="weather-logo" src="https://icons-for-free.com/iconfiles/png/512/fog+foggy+weather+icon-1320196634851598977.png" hight="100px" width="100px">
+
 ---
 
 ### Technologies in use - 👩‍💻👨‍💻
@@ -37,7 +39,7 @@
 
 - **You can clear the search bar and the search so far with the red button**
 
-#### Errors
+#### Errors ⛔
 
 - **Nice pop-up messages informing you of an error.**
 
@@ -46,6 +48,13 @@
 - **Shows weather forecast for about 5 days starting today (today as well as 24 hours from now, 48 hours and so on)🌞⛅🌦**
 - **Nice pictures illustrating the expected weather**
 - **The state flag to which the city belongs to**
+
+---
+
+### Future - 
+
+- **Mobile design**
+- **Display data for more hours in every day**
 
 ---
 
