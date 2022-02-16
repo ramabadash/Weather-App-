@@ -1,0 +1,21 @@
+.weather-container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: auto;
+  margin-top: 10vh;
+  background-color: rgb(86, 141, 143);
+}
+
+.days-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  padding: 2vh;
+}
+.weather-day {
+  background-color: cadetblue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1em;
+  margin-top: 0.5em;
+}
